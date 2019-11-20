@@ -1,4 +1,4 @@
-# JSON-Swift-Driver
+# Swift-JSON-Swift
 
 Parsing JSON in Swift Made Simple
 
