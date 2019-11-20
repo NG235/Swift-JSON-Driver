@@ -1,8 +1,8 @@
 import Foundation
 
-public var JSON = Swift_JSON()
+public var JSON = JSON_Swift_Driver()
 
-public class Swift_JSON {
+public class JSON_Swift_Driver {
     public let decode = Decode()
     
     public class Decode {
@@ -33,4 +33,4 @@ public class Swift_JSON {
     }
 }
 
-protocol JSON: Codable {}
+protocol JSON_Object: Codable {}
