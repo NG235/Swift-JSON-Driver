@@ -6,7 +6,7 @@ public class JSON_Swift_Driver {
     public let decode = Decode()
     
     public class Decode {
-        public func local<T: Codable>(type: T.Type, from: String) -> [T] {
+        public func local<T: JSON_Object>(type: T.Type, from: String) -> [T] {
             do {
                 let path = Bundle.main.path(forResource: from, ofType: "")
                 let url = URL(fileURLWithPath: path!)
@@ -19,7 +19,7 @@ public class JSON_Swift_Driver {
             }
         }
         
-        public func remote<T: Codable>(type: T.Type, from: String) -> [T] {
+        public func remote<T: JSON_Object>(type: T.Type, from: String) -> [T] {
             do {
                 let url = URL(string: from)
                 let data = try Data(contentsOf: url!)
@@ -33,4 +33,4 @@ public class JSON_Swift_Driver {
     }
 }
 
-protocol JSON_Object: Codable {}
+public protocol JSON_Object: Codable {}
