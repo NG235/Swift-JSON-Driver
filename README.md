@@ -4,7 +4,7 @@ Parsing JSON in Swift Made Simple
 
 ## How It Works
 
-All ```JSON.decode``` methods turn an array of objects conforming to the ```JSON``` protocol.
+All ``JSON.decode`` methods turn an array of objects conforming to the ``JSON`` protocol.
 
 ## Getting Started
 
