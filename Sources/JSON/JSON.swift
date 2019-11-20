@@ -32,3 +32,5 @@ public class Swift_JSON {
         }
     }
 }
+
+protocol JSON: Codable {}
