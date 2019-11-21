@@ -10,7 +10,7 @@ public class JSON_Swift_Driver {
         public let remote = Remote()
         
         public class Local {
-            public func returnVariable<T: JSON_Object>(type: T.Type, from: String) -> T {
+            public func returnVariable<T: JSON_Object>(type: T.Type, from: String) -> T? {
                 do {
                     let path = Bundle.main.path(forResource: from, ofType: "")
                     let url = URL(fileURLWithPath: path!)
@@ -19,7 +19,7 @@ public class JSON_Swift_Driver {
                     return result
                 } catch {
                     print("Error: \(error)")
-                    return []
+                    return nil
                 }
             }
             
@@ -38,7 +38,7 @@ public class JSON_Swift_Driver {
         }
         
         public class Remote {
-            public func returnVariable<T: JSON_Object>(type: T.Type, from: String) -> T {
+            public func returnVariable<T: JSON_Object>(type: T.Type, from: String) -> T? {
                 do {
                     let url = URL(string: from)
                     let data = try Data(contentsOf: url!)
@@ -46,7 +46,7 @@ public class JSON_Swift_Driver {
                     return result
                 } catch {
                     print("Error: \(error)")
-                    return []
+                    return nil
                 }
             }
             
